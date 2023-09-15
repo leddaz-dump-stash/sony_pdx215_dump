@@ -1,0 +1,3 @@
+on boot
+    # Set property to disable BT LE Audio for sagami
+    setprop persist.vendor.service.bt.adv_audio_mask 0
