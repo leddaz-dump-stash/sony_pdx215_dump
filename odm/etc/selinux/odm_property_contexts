@@ -1,0 +1,114 @@
+#line 1 "device/somc/sepolicy_vndr/odm/common/property_contexts"
+# Touch
+vendor.backlight_on        u:object_r:vendor_backlighton_prop:s0
+
+# Uevent-observer
+vendor.charger_plugged    u:object_r:vendor_charger_plugged_prop:s0
+vendor.cover_state        u:object_r:vendor_cover_state_prop:s0
+vendor.wireless_charging  u:object_r:vendor_wireless_charging_prop:s0
+
+# bootstrap: nv_updater
+vendor.somc.syscore.product.name u:object_r:vendor_somc_productname_prop:s0
+vendor.somc.syscore.variant.name u:object_r:vendor_somc_variantname_prop:s0
+
+# IDD property_contexts
+vendor.idd.startupprober.start u:object_r:vendor_idd_startupprober_start_prop:s0
+vendor.idd.product.name u:object_r:vendor_idd_vendor_product_name_prop:s0
+
+# Display
+persist.vendor.display.sspp_color_mode  u:object_r:vendor_display_color_prop:s0
+persist.vendor.display.colorgamut.mode  u:object_r:vendor_display_color_prop:s0
+persist.vendor.display.pcc_matrix       u:object_r:vendor_display_color_prop:s0
+persist.vendor.display.opec_mode        u:object_r:vendor_display_color_prop:s0
+persist.vendor.colorgamut.mode          u:object_r:odm_display_color_prop:s0
+persist.vendor.colorgamut.current.mode  u:object_r:odm_display_color_prop:s0
+persist.vendor.automaster.mode          u:object_r:odm_display_color_prop:s0
+persist.vendor.reduce_afterimage.mode   u:object_r:odm_display_color_prop:s0
+persist.vendor.user_fpsmode             u:object_r:odm_display_color_prop:s0
+vendor.display.hmd_mode                 u:object_r:vendor_display_color_prop:s0
+ro.odm.service.fpscontroller.supported  u:object_r:odm_display_color_prop:s0
+vendor.enable.always_on_display         u:object_r:odm_display_always_on_prop:s0
+vendor.display.current_color_mode       u:object_r:odm_display_color_prop:s0
+vendor.display.primary_pcc_matrix       u:object_r:vendor_display_color_prop:s0
+persist.vendor.display.dynamic_tone_mapping.mode u:object_r:odm_display_color_prop:s0
+
+#sony_ext_uim_controller
+persist.vendor.support_esim u:object_r:vendor_support_esim_prop:s0
+
+#bootstrap: taimport_vendor
+ro.vendor.somc.customerid2 u:object_r:vendor_somc_cust_prop:s0
+ro.vendor.somc.sony_product_code u:object_r:vendor_somc_cust_prop:s0
+
+# SW Security - Security Daemon property
+vendor.keyprovd.suntory.prov    u:object_r:vendor_suntory_prop:s0
+vendor.sdm.wakeup u:object_r:vendor_sdm_prop:s0
+
+# SuperStamina
+vendor.smartstamina.touchreport u:object_r:vendor_hal_superstamina_prop:s0
+persist.vendor.disable_high_resolution u:object_r:vendor_hal_superstamina_prop:s0
+
+# Thermal
+vendor.libthermal.currentusecase u:object_r:vendor_somc_thermal_prop:s0
+vendor.thermal.camera.kill u:object_r:vendor_somc_thermal_prop:s0
+vendor.thermal.display_brightness_req u:object_r:vendor_somc_thermal_prop:s0
+
+# Qcril
+persist.vendor.mlog_qmi.log_filter u:object_r:vendor_somc_qcril_prop:s0
+
+# Bluetooth
+ro.vendor.usb.pid_suffix u:object_r:vendor_bluetooth_prop:s0
+ro.vendor.usb.vid        u:object_r:vendor_bluetooth_prop:s0
+
+# Charger
+persist.vendor.battery.charge  u:object_r:vendor_hal_somc_charger_prop:s0
+persist.vendor.battery.smt_chg u:object_r:vendor_hal_somc_charger_prop:s0
+
+# Secondary NTP server
+persist.vendor.ntp.svr_2 u:object_r:vendor_ntp2_prop:s0
+
+# JIML-120617, JIML-131103
+ro.odm.build.SomcCntrl.        u:object_r:odm_somcctrl_prop:s0
+
+# Camera
+# Camera sensor name prop
+vendor.camera.sensor.name u:object_r:vendor_somc_camera_prop:s0
+# Running status prop
+vendor.camera.running_status u:object_r:vendor_somc_camera_prop:s0
+# Libcameralight
+vendor.libcameralight.force_off u:object_r:vendor_somc_camera_prop:s0
+
+# persist NFC properties.
+persist.vendor.nfc.            u:object_r:vendor_nfc_prop:s0
+ro.vendor.nfc.                 u:object_r:vendor_nfc_prop:s0
+
+# JIML-247806
+ro.odm.build.SomcCntrl.Qssi.        u:object_r:odm_somcctrlqssi_prop:s0
+
+# Fingerprint
+vendor.fingerprint.hwid u:object_r:vendor_fingerprint_hwid_prop:s0
+
+# FFU Trigger - SW Update-JP
+vendor.somc.ffu.                  u:object_r:vendor_somc_ffu_prop:s0
+
+# partition info read service
+ro.odm.sony.partition_info.   u:object_r:odm_partition_info_prop:s0
+
+#(Purge GUTI on OS Update for SoftBank)
+persist.vendor.os_update.state u:object_r:vendor_os_update_state_prop:s0 exact string
+
+#360RA
+vendor.360ra.                                   u:object_r:vendor_360ra_prop:s0
+persist.vendor.360ra.                           u:object_r:vendor_360ra_prop:s0
+persist.vendor.360ra.debug.tuning.parameter     u:object_r:vendor_360ra_restricted_prop:s0
+
+# Dolby
+ro.vendor.sony.effect.dolby_atmos u:object_r:vendor_dolby_prop:s0
+
+# Audio Effect Priority Setting
+ro.vendor.sony.effect.prio u:object_r:vendor_sony_effect_prio_prop:s0
+#line 1 "device/somc/sepolicy_vndr/odm/sagami/property_contexts"
+# DRM HDCP
+vendor.somc.hdcp. u:object_r:odm_somc_hdcp_prop:s0
+
+# Bluetooth
+persist.vendor.service.bt.adv_audio_mask u:object_r:vendor_system_bt_prop:s0

@@ -1,0 +1,14 @@
+# qssi-user 13 61.2.A.0.472 1 release-keys
+- manufacturer: sony
+- platform: lahaina
+- codename: pdx215
+- flavor: qssi-user
+- release: 13
+- id: 61.2.A.0.472
+- incremental: 1
+- tags: release-keys
+- fingerprint: Sony/pdx215/pdx215:11/RKQ1.220715.001/1:user/release-keys
+- is_ab: true
+- brand: Sony
+- branch: qssi-user-13-61.2.A.0.472-1-release-keys
+- repo: sony_pdx215_dump
